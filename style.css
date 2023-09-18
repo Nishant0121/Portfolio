@@ -1,0 +1,185 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Global Styles */
+body {
+    background: linear-gradient(to right, #00f8ff, #00fff2, #00ffa6);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header {
+    background: linear-gradient(to right, #00f8ff, #00fff2, #00ffa6);    position: fixed;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+    color: #000000;
+}
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+#nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    width: 90px;
+}
+#nav ul li a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    width: 90px;
+    border-radius: 15px;  
+    
+}
+#nav ul li a:hover{
+    background: linear-gradient(to right, #00f8ff, #00fff2, #00ffa6);
+    color: rgb(0, 0, 0);
+    transition: 0.5s ;
+    box-shadow: #000000 2px 2px 2px;
+}
+#logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#logo img{
+    height: 60px;
+    border-radius: 20px;
+}
+section{
+    padding: 50px;
+}
+
+
+
+
+
+/* about me section */
+#aboutme{
+    background: linear-gradient(to right, #00f8ff, #00fff2, #00ffa6);
+    display: flex;
+    justify-content: center;
+    height: 300px;
+}
+#aboutme .information{
+    color: black;
+    margin: 2px;
+    padding: 10px;
+}
+#aboutme .information h1 {
+    font-size: 40px;
+    height: 40px;
+    font-family: "Bricolage_Grotesque variant0", Tofu;
+}
+#aboutme .information #hideskills {
+display: none;
+}
+#aboutme .information p {
+    margin-top: 15px;
+}
+#aboutme .information button {
+    background: rgb(134, 255, 243);
+    border: #000000 solid 2px;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+    
+}
+#aboutme .information button:hover{
+background: rgba(64, 224, 208, 0.818);
+}
+
+
+
+
+
+/* Projects Section */
+#projects{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    color: whitesmoke;
+    text-shadow: #000000;
+}
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: black;
+    margin: 2px;
+    padding: 10px;
+}
+#projects .project video{
+    width: 100%;
+    opacity: 1;
+    border-radius: 15px;
+}
+#projects #video_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#projects .project video:hover{
+    opacity: 1;
+    scale: 1.02;
+    transition: 0.3s ease;
+    box-shadow: black 4px 4px 4px;
+    
+}
+
+
+
+/* contact section */
+#contact h1{
+    color: whitesmoke;
+    text-shadow: #000000;
+}
+#contact .information {
+    background-color: transparent;
+    color: black;
+    margin: 2px;
+    padding: 10px;
+}
+
+
+
+
+
+@media (max-width:700px) {
+    #projects{
+        display: block;
+        
+    }
+    .project{
+        width: auto;
+        margin: 20px;
+        padding: 10px;
+    }
+    section{
+        padding: 20px;
+    }
+}
