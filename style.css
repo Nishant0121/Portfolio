@@ -18,7 +18,7 @@ body {
     justify-content: center;
 }
 header {
-    background: linear-gradient(to right, #00f8ff, #00fff2, #00ffa6);    position: fixed;
+    background: linear-gradient(to right, #00f8ff, #00fff2, #00ffa6);  
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 7fr 1fr;
@@ -38,14 +38,13 @@ header {
     justify-content: center;
     align-items: center;
     margin-right: 20px;
-    width: 90px;
 }
 #nav ul li a {
     display: flex;
     justify-content: center;
     text-decoration: none;
     color: rgb(0, 0, 0);
-    width: 90px;
+    width: 91px;
     border-radius: 15px;  
     
 }
@@ -64,9 +63,10 @@ header {
     height: 60px;
     border-radius: 20px;
 }
-section{
-    padding: 50px;
+#search{
+    display: none;
 }
+
 
 
 
@@ -179,7 +179,16 @@ background: rgba(64, 224, 208, 0.818);
         margin: 20px;
         padding: 10px;
     }
-    section{
-        padding: 20px;
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-}
+    
+    #search{
+        width: auto;
+    }
+    #nav ul{
+        display: block;
+    }
+    }
