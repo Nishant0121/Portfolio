@@ -4,7 +4,7 @@ function changecolor() {
     nav.style.color= "blue";
 }
 function showskills() {
-    const skills="A frontend web developer , Sketch Artist";
+    const skills="A Frontend Web Developer, Videographer, Sketch Artist";
     document.getElementById("displayskill").innerText=skills;
     let showskills=document.getElementById("showskills");
     showskills.style.display="none";
