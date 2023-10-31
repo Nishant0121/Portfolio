@@ -141,7 +141,11 @@ background: rgba(64, 224, 208, 0.818);
     align-items: center;
     justify-content: center;
 }
-
+#projects #video_info a{
+    text-decoration:none;
+    color:black;
+    
+}
 
 #projects .project video:hover{
     opacity: 1;
