@@ -1,8 +1,9 @@
-const nav = document.querySelector(".nav");
 
-function changecolor() {
-    nav.style.color= "blue";
-}
+const mainMenu=document.querySelector('.mainMenu');
+const closeMenu=document.querySelector('.closeMenu');
+const openMenu=document.querySelector('.openMenu');
+
+
 function showskills() {
     const skills="A Frontend Web Developer, Videographer, Sketch Artist";
     document.getElementById("displayskill").innerText=skills;
@@ -17,3 +18,14 @@ function hideskills() {
     let showskills=document.getElementById("showskills");
     showskills.style.display="block";
 }
+function show() {
+    mainMenu.style.display='flex'
+    mainMenu.style.top='0'
+}
+function close() {
+    mainMenu.style.top='-100%'
+}
+
+
+openMenu.addEventListener('click',show);
+closeMenu.addEventListener('click',close);
