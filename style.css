@@ -12,60 +12,64 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
-.heading{
+nav{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
-header {
-    background: linear-gradient(to right, #00f8ff, #00fff2, #00ffa6);  
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 7fr 1fr;
-    color: #000000;
+.three-lines{
+    width: 43px;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    margin: 4px 0;
 }
-#nav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#nav ul {
-    list-style: none;
-    display: flex;
-}
-#nav ul li {
+.logo{
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-right: 20px;
+    align-self: center;
 }
-#nav ul li a {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    width: 91px;
-    border-radius: 15px;  
-    
-}
-#nav ul li a:hover{
-    background: linear-gradient(to right, #00f8ff, #00fff2, #00ffa6);
-    color: rgb(0, 0, 0);
-    transition: 0.5s ;
-    box-shadow: #000000 2px 2px 2px;
-}
-#logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#logo img{
+.logo img{
     height: 60px;
-    border-radius: 20px;
 }
-#search{
+.openMenu{
     display: none;
 }
+.mainMenu{
+    display: flex;
+    list-style: none;
+    
+}
+.mainMenu li a{
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 14px;
+    border-radius: 15px;
+}
+.mainMenu li a:hover{
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.mainMenu .closeMenu , .icons i {
+    display: none;
+    cursor: pointer;
+}
+.fa-insta:hover{
+    background-color: aqua;
+    color: black;
+}
+.fa-insta:linkedin{
+    background-color: aqua;
+    color: black;
+}
+.fa-github:hover{
+    background-color: aqua;
+    color: black;
+}
+
+
 
 
 
@@ -163,10 +167,16 @@ background: rgba(64, 224, 208, 0.818);
     text-shadow: #000000;
 }
 #contact .information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
     color: black;
     margin: 2px;
     padding: 10px;
+}
+#contact .information a img{
+    height: 35px;
 }
 
 
@@ -192,7 +202,48 @@ background: rgba(64, 224, 208, 0.818);
     #search{
         width: auto;
     }
-    #nav ul{
+    .nav-elements ul{
         display: block;
     }
+    .nav-elements .nav-elements{
+        display: none;
     }
+    
+    .mainMenu{
+        height: 360px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: aqua;
+        transition: top 1s ease;
+        display: none;
+    }
+    .mainMenu .closeMenu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .openMenu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .mainMenu li a :hover{
+        background: none;
+        color: red;
+    }
+    .icons i{
+        display: inline-block;
+        padding: 12px;
+    }
+}
+
